@@ -1,4 +1,5 @@
 [+] Added fov changer
+
 [+] Reworked menu a bit
 
 - HOW TO USE
