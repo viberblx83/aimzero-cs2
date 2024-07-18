@@ -4,6 +4,7 @@
 
 [+] Added hitboxes for ragebot
 
+- HOW TO USE 
 - first run cs2
 - then run aimzero.exe
 - thats it
