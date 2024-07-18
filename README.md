@@ -2,6 +2,7 @@
 
 [+] Reworked menu a bit
 
+
 - HOW TO USE
 - run cs2 first
 - run aimzero.exe
