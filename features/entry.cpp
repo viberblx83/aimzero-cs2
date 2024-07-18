@@ -1,6 +1,7 @@
 #include "esp.hpp"
 #include "aim.hpp"
 #include "misc.hpp"
+#include "fov.hpp"
 
 #include "../util/utilFunctions.hpp"
 
@@ -21,6 +22,16 @@ void mainLoop(bool state, MemoryManagement::moduleData client) {
 
 	// NOTE: Cheats that only need local player / visuals that don't relate to gameplay
 	localPlayer.getPlayerPawn();
+
+
+	uintptr_t cameraServices = MemMan.ReadMem<uintptr_t>(localPlayer.getPlayerPawn() + clientDLL::cameraServicesPointer);
+	int readFov = MemMan.ReadMem<int>(cameraServices + clientDLL::CCSPlayerBase_CameraServices_["m_iFOV"]);
+	if (readFov != espConf.fov) {
+		fov::setFov(espConf.fov, localPlayer);
+		
+	}
+
+
 	// Aimbot FOV circle
 	if (aimConf.fovCircle) {
 		ImVec2 p = ImGui::GetWindowPos();
@@ -40,6 +51,8 @@ void mainLoop(bool state, MemoryManagement::moduleData client) {
 
 	// Tigger
 	if (aimConf.trigger) aim::triggerBot(localPlayer, client.base);
+
+
 
 
 	// Main loop

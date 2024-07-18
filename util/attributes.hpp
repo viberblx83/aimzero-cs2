@@ -37,6 +37,10 @@ namespace clientDLL {
 	inline nlohmann::json EntitySpottedState_t_ = clientDLLOffsets["EntitySpottedState_t"]["fields"];
 	inline nlohmann::json C_CSGameRules_= clientDLLOffsets["C_CSGameRules"]["fields"];
 	inline nlohmann::json CCSWeaponBaseVData_ = clientDLLOffsets["CCSWeaponBaseVData"]["fields"];
+	inline nlohmann::json CCSPlayerBase_CameraServices_ = clientDLLOffsets["CCSPlayerBase_CameraServices"]["fields"];
+
+	inline uintptr_t cameraServicesPointer = 0x1130;
+
 };
 
 

@@ -121,14 +121,12 @@ void imGuiMenu::espRender() {
 		ImGui::Text("Box options");
 		ImGui::PopFont();
 		ImGui::Dummy(ImVec2(0.0f, textSeparatorSpace));
-		ImGui::Dummy(ImVec2(0.0f, textSeparatorSpace));
 		ImGui::Checkbox("Colour fill", &espConf.filledBox);
-		ImGui::Dummy(ImVec2(0.0f, textSeparatorSpace));
-		ImGui::SliderFloat("Fill alpha", &espConf.filledBoxAlpha, 0.f, 1.f);
-		ImGui::Dummy(ImVec2(0.0f, textSeparatorSpace));
-		ImGui::SliderFloat("Width", &espConf.width, 1.f, 5.f);
-		ImGui::Dummy(ImVec2(0.0f, textSeparatorSpace));
-		ImGui::SliderFloat("Thickness", &espConf.boundBoxThickness, 1.f, 3.f);
+		ImGui::Dummy(ImVec2(0.0f, textSeparatorSpace)); 
+		ImGui::PushFont(imGuiMenu::subTitleText);    
+		ImGui::Text("Fov changer");
+		ImGui::Dummy(ImVec2(0.0f, textSeparatorSpace));   
+		ImGui::SliderInt("FOV", &espConf.fov, 60, 140);
 		ImGui::EndChild();
 
 
@@ -237,12 +235,8 @@ void imGuiMenu::miscRender() {
 		ImGui::PopFont();
 		ImGui::Dummy(ImVec2(0.0f, textSeparatorSpace));
 		ImGui::Checkbox("Bhop - buggy", &miscConf.bunnyHop);
-		ImGui::EndChild();
-
-		horizontalSplitter(HEIGHT);
-
-		ImGui::BeginChild("Visual", ImVec2(0, 0), true);
 		ImGui::PushFont(imGuiMenu::titleText);
+		ImGui::Dummy(ImVec2(0.0f, textSeparatorSpace));  
 		ImGui::Text("Visual");
 		ImGui::PopFont();
 		ImGui::Dummy(ImVec2(0.0f, textSeparatorSpace));

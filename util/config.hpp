@@ -38,6 +38,8 @@ struct espConfig {
 	bool snapLines;
 
 	bool distance;
+
+	int fov;
 };
 inline espConfig espConf = {};
 
