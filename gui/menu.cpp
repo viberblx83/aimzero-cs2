@@ -290,9 +290,8 @@ void imGuiMenu::aboutMeRender() {
 	if (tabCount == 5) {
 		ImGui::BeginChild("UPDATES", ImVec2(0, 0), true);
 		ImGui::PushFont(imGuiMenu::titleText);
-		ImGui::Text("[+] Fixed for latest game update");
-		ImGui::Text("[+] Added Visibility check for esp");
-		ImGui::Text("[+] Added hitboxes for ragebot");
+		ImGui::Text("[+] Added fov changer");
+		ImGui::Text("[+] Reworked menu a bit");
 		ImGui::PopFont();
 		ImGui::Text("");
 		ImGui::Dummy(ImVec2(0.0f, textSeparatorSpace));
