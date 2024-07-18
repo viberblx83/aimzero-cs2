@@ -4,6 +4,10 @@
 
 [+] Added hitboxes for ragebot
 
+- first run cs2
+- then run aimzero.exe
+- thats it
+
 Aimzero is external cheat, it has a good amount of features
 enjoy!
 
