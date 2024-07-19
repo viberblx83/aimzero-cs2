@@ -4,11 +4,6 @@
 
 
 
-- HOW TO USE
-- Run cs2 first
-- Run aimzero.exe
-- Enjoy Aimzero
-
 - base that i used > https://github.com/gmh5225/tim_apple
 ![Screenshot (353)](https://github.com/user-attachments/assets/ce601a8d-c797-4a08-8e6b-379c2769352f)
 ![Screenshot (354)](https://github.com/user-attachments/assets/5d6dd62e-b0b8-4c36-ac2a-19cfd7c7a5ec)
